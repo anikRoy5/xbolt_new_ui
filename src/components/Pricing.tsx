@@ -144,9 +144,9 @@ export default function Pricing() {
                   
                   {/* CTA */}
                   <Button 
-                    className="w-full" 
+                    className="w-full bg-primary" 
                     size="lg" 
-                    variant={plan.variant}
+                    
                   >
                     {plan.cta}
                   </Button>

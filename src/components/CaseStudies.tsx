@@ -63,7 +63,7 @@ export default function CaseStudies() {
               <div className="relative h-full glass rounded-2xl p-8 hover:scale-[1.02] transition-all duration-500">
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${study.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`} />
-                
+
                 <div className="relative space-y-6">
                   {/* Company header */}
                   <div className="flex items-start justify-between">
@@ -78,7 +78,7 @@ export default function CaseStudies() {
                     </div>
                     <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                   </div>
-                  
+
                   {/* Metric highlight */}
                   <div className="py-6 border-y border-border/50">
                     <div className="flex items-center gap-3">
@@ -91,20 +91,20 @@ export default function CaseStudies() {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Description */}
                   <p className="text-muted-foreground">{study.description}</p>
-                  
+
                   {/* Testimonial */}
                   <blockquote className="space-y-2">
-                    <p className="text-sm italic">"{study.testimonial}"</p>
+                    <p className="text-sm italic">&quot;{study.testimonial}&quot;</p>
                     <p className="text-xs text-muted-foreground">— {study.author}</p>
                   </blockquote>
-                  
+
                   {/* Visual metric bars */}
                   <div className="space-y-2">
                     <div className="h-2 bg-gradient-to-r from-card to-card/50 rounded-full overflow-hidden">
-                      <div 
+                      <div
                         className={`h-full bg-gradient-to-r ${study.gradient} rounded-full transition-all duration-1000`}
                         style={{ width: study.metric }}
                       />

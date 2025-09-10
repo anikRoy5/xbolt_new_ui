@@ -1,37 +1,40 @@
 "use client"
 
 import { useState } from "react";
-import { ChevronDown, Menu, X, Phone, Zap, Users, Settings, BookOpen, Building2 } from "lucide-react";
+import { ChevronDown, Menu, X, Phone, Zap, Users, Settings, BookOpen, Building2, LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import path from "path";
 import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  interface NavItem {
+    name: string;
+    icon: LucideIcon;
+    description?: string;
+    path?: string;
+  }
   const productItems = [
     { name: "Voice Calling System", icon: Phone, description: "Real-time calling with recording & controls", path: '/products/voice-calling' },
-    { name: "AI Transcription & Notes", icon: Zap, description: "Convert calls to text with smart summaries" , path:'/products/ai-transcription'},
-    { name: "Messaging Platform", icon: Users, description: "SMS/text messaging with conversation threads", path:'/products/messaging' },
+    { name: "AI Transcription & Notes", icon: Zap, description: "Convert calls to text with smart summaries", path: '/products/ai-transcription' },
+    { name: "Messaging Platform", icon: Users, description: "SMS/text messaging with conversation threads", path: '/products/messaging' },
     { name: "Analytics Dashboard", icon: Settings, description: "Multi-tab insights & performance metrics", path: '/products/analytics' },
   ];
 
   const solutionItems = [
-    { name: "Sales Teams", icon: Users, description: "Boost performance with call analytics & AI insights" },
-    { name: "Customer Support", icon: BookOpen, description: "Enhance experience with transcription & notes" },
-    { name: "Organization Management", icon: Building2, description: "Centralize communication & user management" },
+    { name: "Sales Teams", icon: Users, description: "Boost performance with call analytics & AI insights", path: '/solutions/sales' },
+    { name: "Customer Support", icon: BookOpen, description: "Enhance experience with transcription & notes",/*  path: '/solutions/support' */ },
+    { name: "Organization Management", icon: Building2, description: "Centralize communication & user management", /*path:  '/solutions/organization' */ },
   ];
 
   const resourceItems = [
-    { name: "Documentation", icon: BookOpen },
+    { name: "Documentation", icon: BookOpen, /* path: "/resources/documentation" */ },
     { name: "API Reference", icon: Settings },
     { name: "Help Center", icon: Users },
     { name: "Blog", icon: Building2 },
@@ -44,7 +47,7 @@ const Navbar = () => {
     </div>
   );
 
-  const DropdownSection = ({ items, title }: { items: any[]; title?: string }) => (
+  const DropdownSection = ({ items, title }: { items: NavItem[]; title?: string }) => (
     <div className="p-2">
       {title && <div className="px-2 py-1 text-sm font-medium text-navbar-muted">{title}</div>}
       {items.map((item, index) => (
@@ -111,7 +114,7 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <NavLink>Pricing</NavLink>
+            {/* <Link href={'/pricing'}> */}<NavLink>Pricing</NavLink>{/* </Link> */}
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -124,7 +127,7 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <NavLink>Company</NavLink>
+            {/* <NavLink>Company</NavLink> */}
           </div>
 
           {/* Desktop CTAs */}

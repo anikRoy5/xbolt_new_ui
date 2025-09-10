@@ -153,7 +153,7 @@ export default function UseCases() {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <Button size="xl" variant="holographic">
+          <Button size="lg" variant="navbar-primary">
             See Your Industry Demo
           </Button>
         </div>

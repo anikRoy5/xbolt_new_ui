@@ -69,7 +69,7 @@ export default function PhoneMockup() {
                         <div className="glass rounded-xl p-4 space-y-2 max-h-40 overflow-y-auto">
                             <div className="space-y-1">
                                 <p className="text-xs text-primary">AI Agent</p>
-                                <p className="text-sm">Hi Sarah! I noticed you signed up for our demo. I'd love to understand your current call volume and pain points...</p>
+                                <p className="text-sm">Hi Sarah! I noticed you signed up for our demo. I&quot;d love to understand your current call volume and pain points...</p>
                             </div>
                             <div className="space-y-1 text-right">
                                 <p className="text-xs text-accent">Sarah</p>

@@ -21,7 +21,7 @@
                       <div className="space-y-8">
                           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-primary/20">
                               <Sparkles className="w-4 h-4 text-primary animate-pulse-neon" />
-                              <span className="text-sm text-muted-foreground">The World's First Agentic AI VoIP</span>
+                              <span className="text-sm text-muted-foreground">The World&quot;s First Agentic AI VoIP</span>
                           </div>
 
                           <h1 className="text-5xl lg:text-7xl font-display font-bold leading-tight">

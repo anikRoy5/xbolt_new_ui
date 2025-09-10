@@ -5,7 +5,6 @@ import Hero from "@/components/Hero";
 import InteractiveDemo from "@/components/InteractiveDemo";
 import Pricing from "@/components/Pricing";
 import UseCases from "@/components/UseCases";
-import Image from "next/image";
 
 export default function Home() {
   return (

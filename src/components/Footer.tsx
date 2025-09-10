@@ -21,7 +21,7 @@ export default function Footer() {
               <span className="text-xl font-bold font-display">X-Bolt.ai</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              The world's first agentic AI VoIP platform for modern businesses.
+              The world&apos;s first agentic AI VoIP platform for modern businesses.
             </p>
           </div>
           

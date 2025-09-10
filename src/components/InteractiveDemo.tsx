@@ -74,7 +74,7 @@ export default function InteractiveDemo() {
                 {/* Or simulate call */}
                 <div className="text-center">
                   <p className="text-sm text-muted-foreground mb-4">Or simulate a call here:</p>
-                  <Button size="lg" variant="neon" className="group">
+                  <Button size="lg" variant="navbar-primary" className="group">
                     <Phone className="mr-2 group-hover:animate-pulse" />
                     Start Browser Call
                   </Button>

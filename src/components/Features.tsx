@@ -1,17 +1,15 @@
 "use client";
 
-import React, { useState, useEffect, SVGProps } from "react";
-import { Brain, Phone, Headphones, Shield, BarChart3, Plug, Users, MessageSquare, Play, Pause } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { Brain, Phone, Headphones, Shield, BarChart3, Plug, Users, MessageSquare, Play, Pause, LucideIcon } from "lucide-react";
 
 // --- START: SELF-CONTAINED UTILITY COMPONENTS & ICONS ---
 // Reusable SVG icon components
-interface IconProps extends SVGProps<SVGSVGElement> {
-  size?: number;
-}
+
 
 // Interface for a feature object
 interface Feature {
-  icon: React.ComponentType<any>;
+  icon:  LucideIcon;
   title: string;
   description: string;
   color: "primary" | "accent" | "neon-green" | "neon-cyan" | "neon-violet";
