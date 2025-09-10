@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Phone, Mic, MicOff } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -22,7 +22,7 @@ export default function PhoneMockup() {
             <div className="absolute inset-0 bg-gradient-radial from-neon-blue/30 to-transparent blur-3xl" />
 
             {/* Phone frame */}
-            <div className="relative w-80 h-[600px] mx-auto">
+            <div className="relative w-80 h-[580px] mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-b from-card/80 to-card/40 rounded-[3rem] border border-white/10 backdrop-blur-xl overflow-hidden">
                     {/* Status bar */}
                     <div className="flex justify-between items-center px-6 py-4 text-xs text-muted-foreground">
@@ -66,33 +66,38 @@ export default function PhoneMockup() {
                         </div>
 
                         {/* AI Transcript */}
-                        <div className="glass rounded-xl p-4 space-y-2 max-h-40 overflow-y-auto">
+                        <div className="glass rounded-xl p-2 space-y-2">
                             <div className="space-y-1">
                                 <p className="text-xs text-primary">AI Agent</p>
-                                <p className="text-sm">Hi Sarah! I noticed you signed up for our demo. I&quot;d love to understand your current call volume and pain points...</p>
+                                <p className="text-sm">
+                                    Hi Sarah! I saw you signed up. How's your call volume?
+                                </p>
                             </div>
                             <div className="space-y-1 text-right">
                                 <p className="text-xs text-accent">Sarah</p>
-                                <p className="text-sm">We handle about 500 calls daily and our agents are overwhelmed...</p>
+                                <p className="text-sm">
+                                    About 500 calls daily. Agents are overwhelmed.
+                                </p>
                             </div>
                         </div>
 
+
                         {/* Call controls */}
-                        <div className="flex justify-center gap-4">
-                            <button
-                                onClick={() => setIsActive(!isActive)}
-                                className="w-14 h-14 rounded-full bg-secondary/50 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:bg-secondary/70 transition-all"
-                            >
-                                {isActive ? (
-                                    <Mic className="w-6 h-6 text-primary" />
-                                ) : (
-                                    <MicOff className="w-6 h-6 text-muted-foreground" />
-                                )}
-                            </button>
-                            <button className="w-14 h-14 rounded-full bg-destructive/80 backdrop-blur-xl border border-destructive/50 flex items-center justify-center hover:bg-destructive transition-all">
-                                <Phone className="w-6 h-6 text-destructive-foreground rotate-[135deg]" />
-                            </button>
-                        </div>
+                        {/*  <div className="flex justify-center gap-4">
+              <button
+                onClick={() => setIsActive(!isActive)}
+                className="w-14 h-14 rounded-full bg-secondary/50 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:bg-secondary/70 transition-all"
+              >
+                {isActive ? (
+                  <Mic className="w-6 h-6 text-primary" />
+                ) : (
+                  <MicOff className="w-6 h-6 text-muted-foreground" />
+                )}
+              </button>
+              <button className="w-14 h-14 rounded-full bg-destructive/80 backdrop-blur-xl border border-destructive/50 flex items-center justify-center hover:bg-destructive transition-all">
+                <Phone className="w-6 h-6 text-destructive-foreground rotate-[135deg]" />
+              </button>
+            </div> */}
                     </div>
                 </div>
             </div>

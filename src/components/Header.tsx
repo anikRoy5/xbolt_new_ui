@@ -29,12 +29,12 @@ const Navbar = () => {
 
   const solutionItems = [
     { name: "Sales Teams", icon: Users, description: "Boost performance with call analytics & AI insights", path: '/solutions/sales' },
-    { name: "Customer Support", icon: BookOpen, description: "Enhance experience with transcription & notes",/*  path: '/solutions/support' */ },
-    { name: "Organization Management", icon: Building2, description: "Centralize communication & user management", /*path:  '/solutions/organization' */ },
+    { name: "Customer Support", icon: BookOpen, description: "Enhance experience with transcription & notes", path: '/solutions/support' },
+    { name: "Organization Management", icon: Building2, description: "Centralize communication & user management", path:  '/solutions/organization' },
   ];
 
   const resourceItems = [
-    { name: "Documentation", icon: BookOpen, /* path: "/resources/documentation" */ },
+    { name: "Documentation", icon: BookOpen, path: "/resources/documentation" },
     { name: "API Reference", icon: Settings },
     { name: "Help Center", icon: Users },
     { name: "Blog", icon: Building2 },
@@ -114,7 +114,7 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* <Link href={'/pricing'}> */}<NavLink>Pricing</NavLink>{/* </Link> */}
+            <Link href={'/pricing'}><NavLink>Pricing</NavLink></Link>
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
