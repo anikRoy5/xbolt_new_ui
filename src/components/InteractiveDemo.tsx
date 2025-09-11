@@ -38,7 +38,7 @@ export default function InteractiveDemo() {
   return (
     <section className="relative py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-t from-card/50 to-transparent" />
-      
+
       <div className="container relative z-10 mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-6xl font-display font-bold">
@@ -53,7 +53,7 @@ export default function InteractiveDemo() {
 
         {/* Live Call Widget */}
         <div className="max-w-4xl mx-auto">
-          <div className="card-holographic rounded-2xl p-8">
+          <div className="card-holographic border rounded-2xl p-8">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Call Interface */}
               <div className="space-y-6">
@@ -61,7 +61,7 @@ export default function InteractiveDemo() {
                 <p className="text-muted-foreground">
                   Experience a live conversation with our AI. No signup required.
                 </p>
-                
+
                 {/* Phone number display */}
                 <div className="glass rounded-xl p-6 text-center">
                   <p className="text-sm text-muted-foreground mb-2">Call this number:</p>
@@ -70,7 +70,7 @@ export default function InteractiveDemo() {
                   </p>
                   <p className="text-xs text-muted-foreground mt-2">Available 24/7 • Free demo call</p>
                 </div>
-                
+
                 {/* Or simulate call */}
                 <div className="text-center">
                   <p className="text-sm text-muted-foreground mb-4">Or simulate a call here:</p>
@@ -80,17 +80,16 @@ export default function InteractiveDemo() {
                   </Button>
                 </div>
               </div>
-              
+
               {/* Demo Scenarios */}
               <div className="space-y-4">
                 <h4 className="text-lg font-semibold">Audio Samples</h4>
-                
+
                 {demoScenarios.map((scenario) => (
                   <div
                     key={scenario.id}
-                    className={`glass rounded-lg p-4 cursor-pointer transition-all ${
-                      activeDemo === scenario.id ? "border-primary/50 bg-primary/5" : "hover:bg-card/50"
-                    }`}
+                    className={`glass rounded-lg p-4 cursor-pointer transition-all ${activeDemo === scenario.id ? "border-primary/50 bg-primary/5" : "hover:bg-card/50"
+                      }`}
                     onClick={() => handlePlayDemo(scenario.id)}
                   >
                     <div className="flex items-center justify-between">
@@ -109,7 +108,7 @@ export default function InteractiveDemo() {
                         </button>
                       </div>
                     </div>
-                    
+
                     {/* Audio waveform visualization */}
                     {activeDemo === scenario.id && (
                       <div className="mt-4 h-12 bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg flex items-center px-4">
@@ -130,11 +129,11 @@ export default function InteractiveDemo() {
                     )}
                   </div>
                 ))}
-                
+
                 {/* Audio controls */}
                 {activeDemo && (
                   <div className="glass rounded-lg p-3 flex items-center gap-3">
-                    <button 
+                    <button
                       onClick={() => setIsPlaying(!isPlaying)}
                       className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
                     >
@@ -156,18 +155,21 @@ export default function InteractiveDemo() {
           </div>
         </div>
 
-        {/* Multi-agent orchestration visual */}
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-semibold mb-8">See Multi-Agent Orchestration in Action</h3>
+          <h3 className="text-2xl font-semibold mb-8">
+            See Multi-Agent Orchestration in Action
+          </h3>
           <div className="glass rounded-2xl p-8">
             <div className="relative h-64">
               {/* Central orchestrator */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-gradient-neon flex items-center justify-center z-10">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+                          w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent 
+                          flex items-center justify-center z-10 shadow-lg">
                 <Brain className="w-12 h-12 text-background" />
               </div>
-              
+
               {/* Orbiting agents */}
-              {["Sales", "Support", "Scheduling", "Analytics"].map((agent, i) => (
+              {["Sales", "Support", "Analytics", "Scheduling",].map((agent, i) => (
                 <div
                   key={agent}
                   className="absolute top-1/2 left-1/2 w-48 h-48"
@@ -176,15 +178,25 @@ export default function InteractiveDemo() {
                     animationDelay: `${i * 2}s`,
                   }}
                 >
-                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full glass text-xs">
+                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 
+                              px-3 py-1 rounded-full bg-accent/80 text-foreground text-xs shadow">
                     {agent}
                   </div>
                 </div>
               ))}
-              
+
               {/* Connection lines */}
               <svg className="absolute inset-0 w-full h-full pointer-events-none">
-                <circle cx="50%" cy="50%" r="100" fill="none" stroke="url(#demo-gradient)" strokeWidth="1" strokeDasharray="5 5" opacity="0.3" />
+                <circle
+                  cx="50%"
+                  cy="50%"
+                  r="100"
+                  fill="none"
+                  stroke="url(#demo-gradient)"
+                  strokeWidth="1.5"
+                  strokeDasharray="5 5"
+                  opacity="0.5"
+                />
                 <defs>
                   <linearGradient id="demo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stopColor="hsl(var(--primary))" />

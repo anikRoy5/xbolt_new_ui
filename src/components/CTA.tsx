@@ -11,7 +11,7 @@ export default function CTA() {
       <div className="absolute top-10 left-10 w-64 h-64 bg-gradient-radial from-primary/30 to-transparent rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-10 right-10 w-64 h-64 bg-gradient-radial from-accent/30 to-transparent rounded-full blur-3xl animate-float" style={{ animationDelay: "3s" }} />
       
-      <div className="container relative z-10 mx-auto px-4">
+      <div className="container relative z-10 mx-auto px-4 border">
         <div className="card-holographic rounded-3xl p-12 md:p-20 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             {/* Badge */}

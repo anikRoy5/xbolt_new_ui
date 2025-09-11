@@ -1,10 +1,10 @@
 "use client";
 
-import { Phone, Mic, MicOff } from "lucide-react";
+import { Phone} from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function PhoneMockup() {
-    const [isActive, setIsActive] = useState(true);
+    const [isActive] = useState(true);
     const [waveHeights, setWaveHeights] = useState<number[]>([]);
 
     useEffect(() => {
@@ -70,7 +70,7 @@ export default function PhoneMockup() {
                             <div className="space-y-1">
                                 <p className="text-xs text-primary">AI Agent</p>
                                 <p className="text-sm">
-                                    Hi Sarah! I saw you signed up. How's your call volume?
+                                    Hi Sarah! I saw you signed up. How&apos;s your call volume?
                                 </p>
                             </div>
                             <div className="space-y-1 text-right">

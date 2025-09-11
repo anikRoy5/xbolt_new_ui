@@ -85,13 +85,13 @@ export default function Pricing() {
               key={index}
               className={cn(
                 "relative group",
-                plan.popular && "md:scale-105"
+                plan.popular && "md:scale-105 bg-accent"
               )}
             >
               {/* Popular badge */}
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
-                  <div className="px-4 py-1 rounded-full bg-gradient-neon text-background text-sm font-semibold">
+                  <div className="px-4 py-1 rounded-full bg-gradient-holographic text-background text-sm font-semibold">
                     Most Popular
                   </div>
                 </div>
@@ -113,7 +113,7 @@ export default function Pricing() {
                   <div className="space-y-4">
                     <div className={cn(
                       "inline-flex p-3 rounded-xl",
-                      plan.popular ? "bg-gradient-neon" : "bg-gradient-to-br from-primary/20 to-accent/20"
+                      plan.popular ? "bg-gradient-holographic" : "bg-gradient-to-br from-primary/20 to-accent/20"
                     )}>
                       <plan.icon className="w-6 h-6 text-foreground" />
                     </div>

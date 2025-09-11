@@ -21,7 +21,7 @@ const caseStudies = [
     metricLabel: "Cost Reduction",
     description: "AI-powered customer support handling returns and tracking",
     icon: DollarSign,
-    gradient: "from-accent to-neon-violet",
+    gradient: "from-green-500 to-neon-cyan",
     testimonial: "We cut support costs in half while improving CSAT scores.",
     author: "Mike Johnson, COO",
   },
@@ -33,7 +33,7 @@ const caseStudies = [
     metricLabel: "Time Saved",
     description: "Automated appointment scheduling and prescription reminders",
     icon: Clock,
-    gradient: "from-neon-green to-primary",
+    gradient: "from-blue-500 to-primary",
     testimonial: "Our staff can focus on patients, not phone calls.",
     author: "Dr. Emily Rodriguez",
   },
@@ -45,7 +45,7 @@ export default function CaseStudies() {
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-6xl font-display font-bold">
-            <span className="bg-gradient-neon bg-clip-text text-transparent">Real Results</span>
+            <span className="bg-gradient-neon bg-clip-text text-accent ">Real Results</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             See how SMBs are transforming their operations with X-Bolt.ai

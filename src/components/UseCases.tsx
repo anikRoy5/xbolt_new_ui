@@ -41,12 +41,12 @@ const useCases = [
 
 export default function UseCases() {
   return (
-    <section className="relative py-20 overflow-hidden"> {/* ✅ scrollbar fixed */}
+    <section className="relative py-20 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-6xl font-display font-bold">
             Built for{" "}
-            <span className="bg-gradient-neon bg-clip-text text-transparent">
+            <span className="bg-gradient-holographic bg-clip-text text-transparent">
               Every Industry
             </span>
           </h2>
@@ -60,7 +60,7 @@ export default function UseCases() {
           {useCases.map((useCase, index) => (
             <div
               key={index}
-              className="group relative glass rounded-2xl p-8 hover:scale-[1.02] transition-all duration-500 overflow-hidden" // ✅ added overflow-hidden here too
+              className="group relative glass rounded-2xl p-8 hover:scale-[1.02] transition-all duration-500 overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Background gradient on hover */}
@@ -73,7 +73,8 @@ export default function UseCases() {
                   <div
                     className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${useCase.gradient}`}
                   >
-                    <useCase.icon className="w-8 h-8 text-background" />
+                    {/* ✅ icon color fixed */}
+                    <useCase.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-semibold">{useCase.title}</h3>
                   <p className="text-muted-foreground">{useCase.description}</p>
@@ -90,19 +91,19 @@ export default function UseCases() {
                 </div>
 
                 {/* Visual representation */}
-                <div className="relative h-48 overflow-hidden"> {/* ✅ fixed overflow */}
+                <div className="relative h-48 overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    {/* Animated workflow visualization */}
                     <div className="relative w-full h-full">
                       {/* Central node */}
                       <div
                         className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-gradient-to-br ${useCase.gradient} flex items-center justify-center animate-pulse-neon`}
                       >
-                        <useCase.icon className="w-10 h-10 text-background" />
+                        {/* ✅ icon color fixed */}
+                        <useCase.icon className="w-10 h-10 text-white" />
                       </div>
 
                       {/* Orbiting nodes */}
-                      {[0, 1, 2].map((i) => (
+                      {/* {[0, 1, 2].map((i) => (
                         <div
                           key={i}
                           className="absolute top-1/2 left-1/2 w-full h-full"
@@ -113,7 +114,7 @@ export default function UseCases() {
                         >
                           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-white/50 rounded-full" />
                         </div>
-                      ))}
+                      ))} */}
 
                       {/* Connection lines */}
                       <svg className="absolute inset-0 w-full h-full pointer-events-none">
@@ -136,10 +137,7 @@ export default function UseCases() {
                             y2="100%"
                           >
                             <stop offset="0%" stopColor="hsl(var(--primary))" />
-                            <stop
-                              offset="100%"
-                              stopColor="hsl(var(--accent))"
-                            />
+                            <stop offset="100%" stopColor="hsl(var(--accent))" />
                           </linearGradient>
                         </defs>
                       </svg>
